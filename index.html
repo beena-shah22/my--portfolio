@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Web Developer</title>
+<meta name="description" content="Portfolio of Your Name, web developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f5;--ink:#14213d;--muted:#4a5a73;--accent:#2f5bff;--panel:#fff;--line:#cfd8e3}
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+header strong{font:700 1.1rem "Bricolage Grotesque",sans-serif}
+nav a{margin-left:20px;color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--accent)}
+.hero{padding:72px 0 56px}
+h1{font:800 clamp(2.6rem,8vw,5.5rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0 0 24px;max-width:14ch}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.2rem;margin:0 0 32px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 26px;border-radius:999px;font-weight:500;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{filter:brightness(1.1)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 2rem "Bricolage Grotesque",sans-serif;margin:0 0 28px;letter-spacing:-.01em}
+.projects{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.project{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px}
+.project h3{font:700 1.25rem "Bricolage Grotesque",sans-serif;margin:0 0 8px}
+.project p{margin:0 0 12px;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.skills li{border:1px solid var(--line);border-radius:999px;padding:6px 16px;background:var(--panel)}
+form{display:grid;gap:16px;max-width:520px}
+label{display:grid;gap:6px;font-weight:500}
+input,textarea{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px}
+textarea{min-height:130px;resize:vertical}
+.hidden{display:none}
+footer{padding:32px 0;color:var(--muted);border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <strong>Your Name</strong>
+    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>I build fast, clear websites.</h1>
+      <p>I'm a web developer who turns ideas into simple, reliable sites and apps. Currently open to freelance projects.</p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="projects">
+        <article class="project"><h3>Local Bakery Site</h3><p>Online menu and ordering page that cut phone orders in half.</p><a href="#">View project</a></article>
+        <article class="project"><h3>Task Tracker App</h3><p>A small team to-do app with sharing and reminders.</p><a href="#">View project</a></article>
+        <article class="project"><h3>Photography Portfolio</h3><p>Image-first gallery that loads in under a second.</p><a href="#">View project</a></article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p style="max-width:60ch">I've spent five years building websites for small businesses and startups. I care about pages that load quickly, read clearly and work on any phone. Replace this paragraph with your own story.</p>
+      <ul class="skills">
+        <li>HTML &amp; CSS</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Figma</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Send me a message</h2>
+      <!-- Netlify Forms: submissions are stored in your Netlify dashboard under Forms -->
+      <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 Your Name</footer>
+</div>
+</body>
+</html>
